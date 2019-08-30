@@ -1,0 +1,4 @@
+github "SwiftyJSON/SwiftyJSON"
+
+# How to update
+# carthage update --platform macOS --no-use-binaries --new-resolver --cache-builds
