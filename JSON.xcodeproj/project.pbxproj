@@ -17,7 +17,6 @@
 		A58DFC33223A99BF00DDE15B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58DFC32223A99BF00DDE15B /* Model.swift */; };
 		A58DFC35223A9C5A00DDE15B /* Ex+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58DFC34223A9C5A00DDE15B /* Ex+String.swift */; };
 		A5CA238B2313D094003E4E57 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CA238A2313D094003E4E57 /* Manager.swift */; };
-		A5DCC27722F2D3EF001E6976 /* SwiftyJSON.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5DCC27622F2D3EF001E6976 /* SwiftyJSON.framework.dSYM */; };
 		A5DDDD99233C85180054159B /* Ex+NSNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDDD98233C85180054159B /* Ex+NSNumber.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +27,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				A5DCC27722F2D3EF001E6976 /* SwiftyJSON.framework.dSYM in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +57,6 @@
 		A58DFC34223A9C5A00DDE15B /* Ex+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+String.swift"; sourceTree = "<group>"; };
 		A5CA238A2313D094003E4E57 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		A5DCC27222F2D1A6001E6976 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/Mac/SwiftyJSON.framework; sourceTree = "<group>"; };
-		A5DCC27622F2D3EF001E6976 /* SwiftyJSON.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SwiftyJSON.framework.dSYM; path = Carthage/Build/Mac/SwiftyJSON.framework.dSYM; sourceTree = "<group>"; };
 		A5DDDD98233C85180054159B /* Ex+NSNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+NSNumber.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,7 +110,6 @@
 		A58DFC16223A94EA00DDE15B = {
 			isa = PBXGroup;
 			children = (
-				A5DCC27622F2D3EF001E6976 /* SwiftyJSON.framework.dSYM */,
 				A58DFC21223A94EB00DDE15B /* JSON */,
 				A58DFC20223A94EB00DDE15B /* Products */,
 				A5DCC27122F2D1A6001E6976 /* Frameworks */,
@@ -373,7 +369,8 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 5HZKWDU956;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
@@ -384,6 +381,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.RayJiang.JSON;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -399,7 +397,8 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 5HZKWDU956;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
@@ -410,6 +409,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.RayJiang.JSON;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
