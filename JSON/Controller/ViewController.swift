@@ -151,17 +151,28 @@ extension ViewController {
         contentTv.string = content
     }
     
-    /// query to model
+    /// request to model
     private func output3() {
         guard let jsonTv = jsonTV.contentView.documentView as? NSTextView else { return }
         guard let contentTv = contentTV.contentView.documentView as? NSTextView else { return }
-        let urlStr = jsonTv.string.hasPrefix("http") ? jsonTv.string : "http://www.placehold.com?\(jsonTv.string)"
-        guard let url = URL(string: urlStr), let query = url.query else { return }
-        dealQuery(query)
+        guard let jsonData = jsonTv.string.data(using: .utf8) else { return }
         
+        let list: [JsonModel]
+        if let dict = (try? JSONSerialization.jsonObject(with: jsonData, options: .mutableLeaves)) as? [String:Any] {
+            dealDictionary(dict, className: "Root")
+            list = modelList["Root"] ?? []
+        } else {
+            let urlStr = jsonTv.string.hasPrefix("http") ? jsonTv.string : "http://www.placehold.com?\(jsonTv.string)"
+            if let url = URL(string: urlStr), let query = url.query {
+                dealQuery(query)
+                list = modelList["Root"] ?? []
+            } else {
+                contentTv.string = "The data couldn’t be read because it isn’t in the correct format."
+                return
+            }
+        }
         
         var content = ""
-        let list = modelList["Root"] ?? []
         let sortList = sortModelList(list)
         content += printClass(name: "Root", list: list)
         content += "\n"

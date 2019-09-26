@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15400"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -413,39 +413,39 @@
                                 <rect key="frame" x="605" y="15" width="180" height="434"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iiR-dD-pH4">
-                                        <rect key="frame" x="-2" y="414" width="44" height="17"/>
+                                        <rect key="frame" x="-2" y="415" width="44" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="解析库" id="S6G-6X-Pmh">
-                                            <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                            <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="c2Z-wG-Lc6">
-                                        <rect key="frame" x="-2" y="382" width="58" height="17"/>
+                                        <rect key="frame" x="-2" y="384" width="58" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="驼峰命名" id="qZo-58-G5y">
-                                            <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                            <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Jax-DU-v8k">
-                                        <rect key="frame" x="-2" y="350" width="58" height="17"/>
+                                        <rect key="frame" x="-2" y="353" width="58" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="自动排序" id="evE-1y-mSZ">
-                                            <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                            <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Rrg-iO-6Zb">
-                                        <rect key="frame" x="-2" y="318" width="44" height="17"/>
+                                        <rect key="frame" x="-2" y="322" width="44" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="强过滤" id="7Xz-KI-VrB">
-                                            <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                            <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="27M-pS-ReQ">
-                                        <rect key="frame" x="63" y="409" width="120" height="25"/>
+                                        <rect key="frame" x="63" y="410" width="120" height="25"/>
                                         <popUpButtonCell key="cell" type="push" title="SwiftyJSON" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="kjP-MF-pvi" id="ae5-1Y-zln">
                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -457,7 +457,7 @@
                                         </popUpButtonCell>
                                     </popUpButton>
                                     <button verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="Kip-em-F6M">
-                                        <rect key="frame" x="59" y="373" width="127" height="32"/>
+                                        <rect key="frame" x="59" y="375" width="127" height="32"/>
                                         <buttonCell key="cell" type="push" title="开启" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" inset="2" id="ofy-jO-3u3">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -467,7 +467,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ufd-cX-Hga">
-                                        <rect key="frame" x="59" y="341" width="127" height="32"/>
+                                        <rect key="frame" x="59" y="344" width="127" height="32"/>
                                         <buttonCell key="cell" type="push" title="开启" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" inset="2" id="mT2-ik-HoI">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -477,7 +477,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="zyp-FY-hAS">
-                                        <rect key="frame" x="59" y="309" width="127" height="32"/>
+                                        <rect key="frame" x="59" y="313" width="127" height="32"/>
                                         <buttonCell key="cell" type="push" title="开启" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" inset="2" id="qm6-bf-eoJ">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -518,7 +518,7 @@
                                 </constraints>
                                 <buttonCell key="cell" type="push" title="生成" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ToH-TP-7EK">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                    <font key="font" metaFont="system"/>
                                     <string key="keyEquivalent">r</string>
                                     <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                 </buttonCell>
@@ -527,7 +527,7 @@
                                 </connections>
                             </button>
                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lXh-mv-lVF">
-                                <rect key="frame" x="13" y="461" width="129" height="25"/>
+                                <rect key="frame" x="13" y="461" width="142" height="25"/>
                                 <popUpButtonCell key="cell" type="push" title="JSON转Model" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="x80-OF-RVn" id="1Rt-lk-Rt7">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -535,7 +535,7 @@
                                         <items>
                                             <menuItem title="JSON转Model" state="on" keyEquivalent="1" id="x80-OF-RVn"/>
                                             <menuItem title="生成Init" tag="1" keyEquivalent="2" id="jet-cG-3OI"/>
-                                            <menuItem title="Query转Model" tag="2" keyEquivalent="3" id="YGs-Ie-c61"/>
+                                            <menuItem title="Request转Model" tag="2" keyEquivalent="3" id="YGs-Ie-c61"/>
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
