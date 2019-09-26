@@ -7,7 +7,6 @@
 //
 
 import Cocoa
-import SwiftyJSON
 
 /// 类名:[变量列表]
 var modelList: [String:[JsonModel]] = [:]
@@ -106,7 +105,10 @@ extension ViewController {
     private func output1() {
         guard let jsonTv = jsonTV.contentView.documentView as? NSTextView else { return }
         guard let contentTv = contentTV.contentView.documentView as? NSTextView else { return }
-        dealDictionary(JSON(parseJSON: jsonTv.string), className: "Root")
+        guard let jsonData = jsonTv.string.data(using: .utf8) else { return }
+        guard let dict = (try? JSONSerialization.jsonObject(with: jsonData, options: .mutableLeaves)) as? [String:Any] else { return }
+        dealDictionary(dict, className: "Root")
+        
         if modelList.isEmpty {
             contentTv.string = "The data couldn’t be read because it isn’t in the correct format."
             return
@@ -174,7 +176,7 @@ extension ViewController {
 /// Private
 extension ViewController {
     
-    private func dealDictionary(_ dict: JSON, className: String) {
+    private func dealDictionary(_ dict: [String:Any], className: String) {
         modelNameList.append(className)
         for (key, value) in dict {
             if let model = JsonModel(key: key, value: value) {
@@ -185,11 +187,13 @@ extension ViewController {
                 }
                 
                 if model.valueType == .array {
-                    if let firstObj = model.value.arrayValue.first {
+                    if let firstObj = (model.value as? [[String:Any]])?.first {
                         dealDictionary(firstObj, className: model.className)
                     }
                 } else if model.valueType == .dictionary {
-                    dealDictionary(model.value, className: model.className)
+                    if let subDict = model.value as? [String:Any] {
+                        dealDictionary(subDict, className: model.className)
+                    }
                 }
             }
         }

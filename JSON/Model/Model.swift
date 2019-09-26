@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import SwiftyJSON
 
 enum ValueType {
     case bool
@@ -36,7 +35,7 @@ enum ValueType {
 struct JsonModel {
     
     var key: String
-    var value: JSON
+    var value: Any
     
     var valueType: ValueType
     var valueName: String = ""
@@ -59,27 +58,27 @@ struct JsonModel {
 extension JsonModel {
     
     /// JSON 初始化方法，value 为 null 则初始化失败
-    init?(key: String, value: JSON) {
-        if value.type == .null || value.type == .unknown { return nil }
+    init?(key: String, value: Any) {
+//        if value.type == .null || value.type == .unknown { return nil }
         self.key = key
         self.value = value
 
-        if value.type == .bool {
+        if let number = value as? NSNumber, number.isBool {
             self.valueType = .bool
             self.valueName = "Bool"
-        } else if value.rawValue is Int {
+        } else if value is Int {
             self.valueType = .int
             self.valueName = "Int"
-        } else if value.rawValue is Double {
+        } else if value is Double {
             self.valueType = .double
             self.valueName = "Double"
-        } else if value.type == .string {
+        } else if value is String {
             self.valueType = .string
             self.valueName = "String"
-        } else if value.type == .array { // 把数组中创建成一个对象
+        } else if value is [[String:Any]] {
             self.valueType = .array
             self.valueName = "[\(className)]"
-        } else if value.type == .dictionary { // 把字典创建成一个对象
+        } else if value is [String:Any] {
             self.valueType = .dictionary
             self.valueName = "\(className)"
         } else {
@@ -94,7 +93,7 @@ extension JsonModel {
     /// ValueStr 初始化方法
     init(key: String, value: String) {
         self.key = key
-        self.value = JSON(parseJSON: "")
+        self.value = ""
         
         if let _ = Int(value) {
             self.valueType = .int
@@ -113,6 +112,6 @@ extension JsonModel {
         self.key = key
         self.valueName = valueName
         self.valueType = .bool
-        self.value = JSON(parseJSON: "")
+        self.value = ""
     }
 }

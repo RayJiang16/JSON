@@ -18,8 +18,7 @@
 		A58DFC35223A9C5A00DDE15B /* Ex+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58DFC34223A9C5A00DDE15B /* Ex+String.swift */; };
 		A5CA238B2313D094003E4E57 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CA238A2313D094003E4E57 /* Manager.swift */; };
 		A5DCC27722F2D3EF001E6976 /* SwiftyJSON.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5DCC27622F2D3EF001E6976 /* SwiftyJSON.framework.dSYM */; };
-		A5DCC27822F2D558001E6976 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DCC27222F2D1A6001E6976 /* SwiftyJSON.framework */; };
-		A5DCC27922F2D558001E6976 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A5DCC27222F2D1A6001E6976 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A5DDDD99233C85180054159B /* Ex+NSNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDDD98233C85180054159B /* Ex+NSNumber.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,7 +38,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A5DCC27922F2D558001E6976 /* SwiftyJSON.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +60,7 @@
 		A5CA238A2313D094003E4E57 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		A5DCC27222F2D1A6001E6976 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/Mac/SwiftyJSON.framework; sourceTree = "<group>"; };
 		A5DCC27622F2D3EF001E6976 /* SwiftyJSON.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SwiftyJSON.framework.dSYM; path = Carthage/Build/Mac/SwiftyJSON.framework.dSYM; sourceTree = "<group>"; };
+		A5DDDD98233C85180054159B /* Ex+NSNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+NSNumber.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +68,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5DCC27822F2D558001E6976 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +79,7 @@
 			children = (
 				A5062FCE2318CBD000903C4B /* Ex+NSColor.swift */,
 				A58DFC34223A9C5A00DDE15B /* Ex+String.swift */,
+				A5DDDD98233C85180054159B /* Ex+NSNumber.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -227,6 +226,7 @@
 			files = (
 				A58DFC33223A99BF00DDE15B /* Model.swift in Sources */,
 				A55E9C512318FE5E0091926C /* Ex+ViewController.swift in Sources */,
+				A5DDDD99233C85180054159B /* Ex+NSNumber.swift in Sources */,
 				A5062FCF2318CBD000903C4B /* Ex+NSColor.swift in Sources */,
 				A5062FD12318CC0000903C4B /* Print.swift in Sources */,
 				A58DFC35223A9C5A00DDE15B /* Ex+String.swift in Sources */,
@@ -373,7 +373,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5HZKWDU956;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
@@ -399,7 +399,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5HZKWDU956;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
