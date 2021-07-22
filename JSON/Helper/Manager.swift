@@ -14,7 +14,7 @@ class Manager {
     private init() { }
     
     public var useCamelCase = true
-    public var autoSort = true
-    public var useGuard = true
+    public var autoSort = false
+    public var useGuard = false
     
 }

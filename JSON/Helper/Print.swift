@@ -76,8 +76,8 @@ func printCallInit(space: String, list: [JsonModel]) -> String {
 /// 根据变量列表输出 JSON 初始化方法
 func printJsonExtension(name: String, list: [JsonModel]) -> String {
     let sortList = sortModelList(list)
-    var content = ("extension " + name + " {\n\n")
-    content += (space1x + "init?(json: JSON) {\n")
+    var content = ("extension " + name + ": JSONModelParsable {\n\n")
+    content += (space1x + "init(from json: JSON) {\n")
     content += printJsonBaseProperty(list: sortList)
     content += printJsonOtherProperty(list: sortList)
     content += printCallInit(space: space2x, list: sortList)
@@ -117,9 +117,9 @@ func printJsonOtherProperty(list: [JsonModel]) -> String {
     var content = ""
     for model in list {
         if model.valueType == .array {
-            content += (space2x + "let " + model.keyName + " = json[\"" + model.key + "\"].arrayValue.compactMap{ " + model.className + "(json: $0) }\n")
+            content += (space2x + "let " + model.keyName + " = json[\"" + model.key + "\"].arrayValue.map { " + model.className + "(from: $0) }\n")
         } else if model.valueType == .dictionary {
-            content += (space2x + "let " + model.keyName + " = " + model.className + "(json: json[\"" + model.key + "\"])\n")
+            content += (space2x + "let " + model.keyName + " = " + model.className + "(from: json[\"" + model.key + "\"])\n")
         }
     }
     return content
@@ -127,8 +127,8 @@ func printJsonOtherProperty(list: [JsonModel]) -> String {
 
 /// mark: - Other
 func printParameters(list: [JsonModel]) -> String {
-    var content = "var parameters: [String:Any] {\n"
-    content += (space1x + "var parameters = [String:Any]()\n")
+    var content = "var parameters: [String: Any] {\n"
+    content += (space1x + "var parameters = [String: Any]()\n")
     for model in list {
         content += (space1x + "parameters[\"" + model.key + "\"] = " + model.keyName + "\n")
     }

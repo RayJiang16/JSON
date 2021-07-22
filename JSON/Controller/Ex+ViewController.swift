@@ -16,6 +16,7 @@ extension ViewController {
         contentTv.setTextColor(NSColor.labelColor, range: NSRange(location: 0, length: contentTv.string.count))
         
         let keywordColor = NSColor.keyword
+        changeColor(string: "import", color: keywordColor)
         changeColor(string: "struct", color: keywordColor)
         changeColor(string: "init", color: keywordColor)
         changeColor(string: "guard", color: keywordColor)

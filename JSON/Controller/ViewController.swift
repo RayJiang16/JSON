@@ -79,21 +79,18 @@ final class ViewController: NSViewController {
     }
     
     @IBAction func didClickCamelCaseButton(_ sender: NSButton) {
-        sender.tag = sender.tag == 0 ? 1 : 0
-        sender.title = sender.tag == 0 ? "关闭" : "开启"
-        Manager.shared.useCamelCase = sender.tag == 1
+        sender.title = sender.state == .on ? "开启" : "关闭"
+        Manager.shared.useCamelCase = sender.state == .on
     }
     
     @IBAction func didClickAutoSortButton(_ sender: NSButton) {
-        sender.tag = sender.tag == 0 ? 1 : 0
-        sender.title = sender.tag == 0 ? "关闭" : "开启"
-        Manager.shared.autoSort = sender.tag == 1
+        sender.title = sender.state == .on ? "开启" : "关闭"
+        Manager.shared.autoSort = sender.state == .on
     }
     
     @IBAction func didClickGuard(_ sender: NSButton) {
-        sender.tag = sender.tag == 0 ? 1 : 0
-        sender.title = sender.tag == 0 ? "关闭" : "开启"
-        Manager.shared.useGuard = sender.tag == 1
+        sender.title = sender.state == .on ? "开启" : "关闭"
+        Manager.shared.useGuard = sender.state == .on
     }
     
 }
@@ -114,7 +111,7 @@ extension ViewController {
             return
         }
         
-        var content = ""
+        var content = "import SwiftyJSON\n\n"
         for className in modelNameList { // 类
             let list = modelList[className] ?? []
             content += printClass(name: className, list: list)
